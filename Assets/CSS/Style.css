@@ -34,8 +34,8 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family:"Libre Franklin" sans-serif;
-    font-family:"Outfit" sans-serif;
-    font-family:"Red Hat Text" sans-serif;
-    font-family:"Space Mono" sans-serif;
+    font-family: 'Libre Franklin', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Red Hat Text', sans-serif;
+    font-family: 'Space Mono', monospace;
 }
