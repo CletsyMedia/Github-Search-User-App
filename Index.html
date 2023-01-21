@@ -12,13 +12,57 @@
     <header>
         <div class="head">DevFinder</div>
         <div class="light-dark mode">
-            <button class="color-modeBtn light-hide">
+            <button class="color-modeBtn light-hide" aria-label="Toggle light mode">
                 Light
+                <i class="fal fa-sun"></i>
             </button>
-            <i class="fal fa-arrow-left"></i>
+            <button class="color-modeBtn dark-hide" aria-label="Toggle dark mode">
+                Light
+                <i class="fal fa-moon"></i>
+            </button>
+            
         </div>
         
     </header>
+
+   <main>
+    <div class="search">
+        <div class="searchTxt">
+            <i class="fal fa-search"></i>
+            <input type="text" name="search" id="search" placeholder="Search Github Username.....">
+        </div>
+    </div>
+    <div class="resultInfo">
+        <div class="githubHead">
+            <div class="mainImg"></div>
+            <div class="githubInfo">
+                <div class="githubUser">Github User</div>
+                <div class="githubUserName"><a href="href">@githubusername</a></div>
+                <div class="githubJoinedDate">Joined Date</div>
+            </div>
+        </div>
+
+        <div class="githubFact">
+            <div class="githuBio">Github Bio...</div>
+
+            <div class="githubRepo">
+                <div class="repos">
+                    <div class="repoHeading">Repos</div>
+                    <div class="repoTotal">0</div>
+                </div>
+                <div class="follower">
+                    <div class="followerHeading">Followers</div>
+                    <div class="followerTotal">0</div>
+                </div>
+                <div class="following">
+                    <div class="followingHeading">Following</div>
+                    <div class="followingTotal">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </main>
+
 
     <script src="./Assets/AppJs/App.js"></script>
 </body>
