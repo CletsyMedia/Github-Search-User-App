@@ -39,3 +39,67 @@ body{
     font-family: 'Red Hat Text', sans-serif;
     font-family: 'Space Mono', monospace;
 }
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 750px;
+    margin-bottom: 25px;
+}
+.head{
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--head-color);
+}
+:root[color-mode="light"].light-hide{
+    display: none;
+}
+:root[color-mode="dark"] .dark-hide{
+    display: none;
+}
+.color-modeBtn{
+    font-size: 13px;
+    outline: none;
+    background-color: var(--body-bg-color);
+    border: none;
+    cursor: pointer;
+    color: var(--darklight-color);
+    align-items: center;
+    width: 78px;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
