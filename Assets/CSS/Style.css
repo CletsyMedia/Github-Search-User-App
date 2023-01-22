@@ -19,7 +19,7 @@
     --head-color:#fff;;
     --dark-light:#fff;
     --search-bg-color:#1e2a47;
-    --search0color:#fff;
+    --search-color:#fff;
     --black:white;
     --follow-bg-color:#f6f8ff;
     --follow-color:#fff;
@@ -51,7 +51,7 @@ header{
     font-weight: bold;
     color: var(--head-color);
 }
-:root[color-mode="light"].light-hide{
+:root[color-mode="light"] .light-hide{
     display: none;
 }
 :root[color-mode="dark"] .dark-hide{
@@ -64,15 +64,61 @@ header{
     border: none;
     cursor: pointer;
     color: var(--darklight-color);
+    display: flex;
     align-items: center;
     width: 78px;
     justify-content: space-between;
 }
+.light i,
+.dark i{
+    font-size: 3rem;
+}
+.search{
+    height:69px;
+    width: 750px;
+    background-color: var(--search-bg-color);
+    border-radius:15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-
-
-
-
+.searchTxt{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.searchTxt i{
+    margin-left: 35px;
+}
+.searchTxt input{
+    margin-left: 20px;
+    height: 100%;
+    width: 500px;
+    border-radius:5px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    color: var(--search-color);
+    background-color: var(--search-bg-color);
+}
+::placeholder{
+    color: var(--search-color);
+    opacity:1;
+}
+.searchBtn{
+    height: 50px;
+    width: 106px;
+    background-color: #0079ff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+}
 
 
 
