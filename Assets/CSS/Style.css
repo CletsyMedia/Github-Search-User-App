@@ -211,10 +211,105 @@ header{
     font-size: 14px;
     gap:.5rem;
 }
+/* Responsiveness */
+@media screen and (max-width:769px) {
+    header,
+    .search{
+        width: 574px;
+    }
+    .searchTxt input{
+        width: 480px;
+    }
+    .resultInfo{
+        width: 573px;
+        height: 481px;
+    }
+    .githubHead,
+    .githubRepo,
+    .githubSocial{
+        width: 493px;
+    }
+    .githubInfo{
+        margin-top:1rem;
+        width: 350px;
+    }
+    .githubJoinedDate{
+        top: 70px;
+        left: 0;
+    }
+    .githubFact{
+        width: 493px;
+        align-items:flex-start;
+        margin-top: 25px;
+    }
+
+}
+
+@media screen and (max-width:428px) {
+    header,
+    .search{
+        width:330px;
+        margin-left: 10px;
+        height: 60px;
+    }
+    .searchTxt input{
+        width:160px;
+        font-size: 12px;
+    }
+    .searchBtn{
+        width: 84px;
+        height: 46px;
+        font-size: 12px;
+    }
+    .resultInfo{
+        width: 330px;
+    }
+    .githubFact,
+    .githubHead{
+        width: 279px;
+    }
+    .resultInfo .mainImg{
+        width: 60px;
+        height: 60px;
+    }
+    .resultInfo .mainImg img{
+        width:100%;
+        height:100%;
+    }
+    .githubInfo{
+        width: 200px;
+    }
+    .githubUser{
+        font-size: 17px;
+    }
+    .githubUserName{
+        margin-top: -5px;
+    }
+    .githubJoinedDate{
+        top: 48px;
+    }
+    .githubUserName a,
+    .githubJoinedDate,
+    .githubBio{
+        font-size: 12px;
+    }
+    .githubBio{
+        margin-top: 25px;
+    }
+    .githubRepo{
+        width: 279px;
+    }
+    .githubSocial{
+        grid-template-columns:279px;
+    }
+    .repoTotal,
+    .followerTotal,
+    .followingTotal{
+        text-align: center;
+    }
 
 
-
-
+}
 
 
 
