@@ -7,26 +7,32 @@
     /* LightMode */
     --body-bg-color:#f6f8ff;
     --head-color:#222731;
-    --darklight-color:#697c9a;
+    --dark-light:#697c9a;
     --search-bg-color:#fff;
     --search-color:#4b6a9b;
     --black:black;
     --follow-color:#4b6a9b;
     --followTotal-color:#2b3442;
     /* DarkMode */
-    --body-bg-color2:#141d2f;
-    --head-color2:#fff;;
+    --body-bg-color:#141d2f;
+    --head-color:#fff;
     --dark-light:#fff;
-    --search-bg-color2:#1e2a47;
-    --search-color2:#fff;
-    --black2:white;
+    --search-bg-color:#1e2a47;
+    --search-color:#fff;
+    --black:white;
     --follow-bg-color:#f6f8ff;
-    --follow-color2:#fff;
-    --followTotal-color2:white;
+    --follow-color:#fff;
+    --followTotal-color:white;
     --social-color:white;
 }
 body.darkTheme{
-
+    --body-bg-color:#f6f8ff;
+    --head-color:#222731;
+    --dark-light:#697c9a;
+    --search-bg-color:#fff;
+    --black:black;
+    --follow-color:#4b6a9b;
+    --followTotal-color:#2b3442;
 }
 body{
     
@@ -37,6 +43,7 @@ img{
 }
 .light-dark{
     cursor: pointer;
+    color: var(--dark-light);
 }
 body{
     background-color:var(--body-bg-color);
@@ -110,7 +117,7 @@ header{
     cursor: pointer;
 }
 .resultInfo{
-    background-color:white;
+    background-color:var(--search-bg-color);
     width: 730px;
     height: 439px;
     border-radius: 15px;
@@ -154,7 +161,7 @@ header{
     top: 7px;
     right: 0;
     font-size: 14px;
-    color: var(--darklight-color);
+    color: var(--dark-light);
 }
 .githubUserName{
     margin-top: 5px;
@@ -173,7 +180,7 @@ header{
 .githubBio{
     width:480px;
     height: 25px;
-    color: var(--search-color);
+    color: var(--dark-light);
     margin: 2px 0px 30px 0px;
 }
 .githubRepo{
@@ -213,6 +220,7 @@ header{
     align-items:center;
     font-size: 14px;
     gap:.5rem;
+    color: var(--dark-light);
 }
 /* Responsiveness */
 @media screen and (max-width:769px) {
@@ -226,6 +234,11 @@ header{
     .resultInfo{
         width: 573px;
         height: 481px;
+    }
+    .searchBtn{
+        margin-right:0;
+        position: absolute;
+        right:6.5rem;
     }
     .githubHead,
     .githubRepo,
