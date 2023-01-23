@@ -26,7 +26,14 @@
     --social-color:white;
 }
 body.darkTheme{
-    --body-bg-color2:#141d2f;
+    --body-bg-color:#f6f8ff;
+    --head-color:#222731;
+    --darklight-color:#697c9a;
+    --search-bg-color:#fff;
+    --search-color:#4b6a9b;
+    --black:black;
+    --follow-color:#4b6a9b;
+    --followTotal-color:#2b3442;
 }
 img{
     max-width:100%;
@@ -137,9 +144,9 @@ header{
 .resultInfo{
     background-color:white;
     width: 730px;
-    height: 419px;
+    height: 439px;
     border-radius: 15px;
-    margin-top: 20px;
+    margin-top:10px;
     display: flex;
     flex-direction: column;
     align-items: center;
