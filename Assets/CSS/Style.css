@@ -25,6 +25,44 @@
     --followTotal-color2:white;
     --social-color:white;
 }
+body.darkTheme{
+    --body-bg-color2:#141d2f;
+}
+img{
+    max-width:100%;
+    display: block;
+}
+.color-modeBtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:.5rem;
+    padding:0.5rem;
+    border: none;
+    outline: none;
+    color: var(--darklight-color);
+    background-color: var(--body-bg-color);
+    border-radius:3px;
+    cursor: pointer;
+}
+.color-modeBtn img{
+    width:18px;
+}
+.light-dark{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.dark--hidden{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.activeBtn{
+    display:flex;
+}
 body{
     background-color:var(--body-bg-color);
     width: 100%;
@@ -49,24 +87,6 @@ header{
     font-size: 26px;
     font-weight: bold;
     color: var(--head-color);
-}
-.light-hide{
-    display: none;
-}
-.dark-hide{
-    display: none;
-}
-.color-modeBtn{
-    font-size: 13px;
-    outline: none;
-    background-color: var(--body-bg-color);
-    border: none;
-    cursor: pointer;
-    color: var(--darklight-color);
-    display: flex;
-    align-items: center;
-    width: 78px;
-    justify-content: space-between;
 }
 .search{
     height:69px;
@@ -128,7 +148,14 @@ header{
     width:117px;
     height:117px;
     border:1px solid var(--black);
-    border-radius:117px;
+    border-radius:50%;
+    object-fit:contain;
+}
+.resultInfo .mainImg img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    border-radius:50%;
 }
 .githubHead{
     display: flex;
@@ -182,6 +209,7 @@ header{
     height: 85px;
     width:480px;
     border-radius:10px;
+    margin-top:40px;
 }
 .repoHeading,
 .followerHeading,
