@@ -26,49 +26,17 @@
     --social-color:white;
 }
 body.darkTheme{
-    --body-bg-color:#f6f8ff;
-    --head-color:#222731;
-    --darklight-color:#697c9a;
-    --search-bg-color:#fff;
-    --search-color:#4b6a9b;
-    --black:black;
-    --follow-color:#4b6a9b;
-    --followTotal-color:#2b3442;
+
+}
+body{
+    
 }
 img{
     max-width:100%;
     display: block;
 }
-.color-modeBtn{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap:.5rem;
-    padding:0.5rem;
-    border: none;
-    outline: none;
-    color: var(--darklight-color);
-    background-color: var(--body-bg-color);
-    border-radius:3px;
-    cursor: pointer;
-}
-.color-modeBtn img{
-    width:18px;
-}
 .light-dark{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-.dark--hidden{
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-}
-.activeBtn{
-    display:flex;
+    cursor: pointer;
 }
 body{
     background-color:var(--body-bg-color);

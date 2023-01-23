@@ -1,12 +1,12 @@
-let light = document.querySelector(".light--hidden");
-let dark =document.querySelector(".dark--hidden");
+let theme = document.querySelector('#theme-btn');
+theme.onclick=()=>{
+    theme.classList.toggle('fa-sun');
+    if(theme.classList.contains('fa-sun')){
+        document.body.classList.add("darkTheme");
+    }else{
+        document.body.classList.remove("darkTheme");
 
-light.onclick=()=>{
-    dark.classList.add("activeBtn");
-    document.body.classList.add("darkTheme")
-}
-dark.onclick=()=>{
-    dark.classList.remove("activeBtn")
+    }
 }
 
 const input = document.querySelector('#search');
