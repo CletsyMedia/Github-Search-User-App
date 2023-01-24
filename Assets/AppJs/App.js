@@ -2,9 +2,9 @@ let theme = document.querySelector('#theme-btn');
 theme.onclick=()=>{
     theme.classList.toggle('fa-sun');
     if(theme.classList.contains('fa-sun')){
-        document.body.classList.add("darkTheme");
+        document.body.classList.add("lightTheme");
     }else{
-        document.body.classList.remove("darkTheme");
+        document.body.classList.remove("lightTheme");
 
     }
 }

@@ -25,7 +25,8 @@
     --followTotal-color:white;
     --social-color:white;
 }
-body.darkTheme{
+body.lightTheme{
+    --search-color:#4b6a9b;
     --body-bg-color:#f6f8ff;
     --head-color:#222731;
     --dark-light:#697c9a;
@@ -48,7 +49,7 @@ img{
 body{
     background-color:var(--body-bg-color);
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,6 +58,13 @@ body{
     font-family: 'Outfit', sans-serif;
     font-family: 'Red Hat Text', sans-serif;
     font-family: 'Space Mono', monospace;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
 }
 header{
     display: flex;
@@ -79,14 +87,10 @@ header{
     align-items: center;
     justify-content: space-between;
 }
-
 .searchTxt{
     display: flex;
     align-items: center;
     height: 100%;
-}
-.searchTxt i{
-    margin-left: 35px;
 }
 .searchTxt input{
     margin-left: 20px;
@@ -113,18 +117,29 @@ header{
     align-items: center;
     color: white;
     font-size: 16px;
-    margin-right: 10px;
     cursor: pointer;
+    margin-right:1rem;
+    transition: transform .5s ease;
+}
+.searchBtn:hover{
+    transform: scale(1.05);
+}
+.searchTxt i{
+    margin-left: 1rem;
 }
 .resultInfo{
     background-color:var(--search-bg-color);
-    width: 730px;
-    height: 439px;
+    max-width: 730px;
+    width: 100%;
+    max-height: 439px;
+    height: 100%;
     border-radius: 15px;
     margin-top:10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+}
+.resultBox{
+    margin: 2rem 3rem;
+    width: initial;
+    height:initial;
 }
 .resultInfo .mainImg{
     width:117px;
@@ -143,11 +158,11 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width:650px;
-    margin-top: 30px;
+    gap:2rem;
+    /* margin-top: 30px; */
 }
 .githubInfo{
-    height: 100%;
+    /* height: 100%; */
     width: 480px;
     position: relative;
 }
@@ -164,7 +179,7 @@ header{
     color: var(--dark-light);
 }
 .githubUserName{
-    margin-top: 5px;
+    margin-top:7px;
 }
 .githubUserName a{
     text-decoration: none;
@@ -178,10 +193,11 @@ header{
     align-items: flex-end;
 }
 .githubBio{
-    width:480px;
+    width:495px;
     height: 25px;
     color: var(--dark-light);
     margin: 2px 0px 30px 0px;
+
 }
 .githubRepo{
     display: flex;
@@ -189,7 +205,7 @@ header{
     justify-content:space-around;
     background-color: var(--body-bg-color);
     height: 85px;
-    width:480px;
+    width:495px;
     border-radius:10px;
     margin-top:40px;
 }
@@ -222,8 +238,87 @@ header{
     gap:.5rem;
     color: var(--dark-light);
 }
+/* 
+
+
+
 /* Responsiveness */
-@media screen and (max-width:769px) {
+@media screen and (max-width:428px) {
+    header,
+    .search{
+        width:390px;
+        margin-bottom:.3rem;
+    }
+    .searchTxt input{
+        width:160px;
+        font-size: 12px;
+    }
+    .searchBtn{
+        width: 84px;
+        height: 46px;
+        font-size: 12px;
+    }
+    .resultInfo{
+        width:390px;
+        max-height:600px;
+    }
+    .resultBox{
+        margin: 1rem;
+    }
+    .githubFact,
+    .githubHead{
+        width:100%;
+    }
+    .resultInfo .mainImg{
+        width: 60px;
+        height: 60px;
+    }
+    .resultInfo .mainImg img{
+        width:100%;
+        height:100%;
+    }
+    .githubInfo{
+        width:270px;
+    }
+    .githubUser{
+        font-size: 17px;
+    }
+    .githubUserName{
+        margin-top: -5px;
+    }
+    .githubJoinedDate{
+        top: 48px;
+        left: 0;
+    }
+    .githubUserName a,
+    .githubJoinedDate,
+    .githubBio{
+        font-size: 12px;
+    }
+    .githubBio{
+        width: 100%;
+        margin-top: 25px;
+    }
+    .githubRepo{
+        width:100%;
+    }
+    .githubSocial{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .repoTotal,
+    .followerTotal,
+    .followingTotal{
+        text-align: center;
+    }
+    /* 
+    
+    
+     */
+
+
+}
+/* @media screen and (max-width:769px) {
     header,
     .search{
         width: 574px;
@@ -259,73 +354,7 @@ header{
         margin-top: 25px;
     }
 
-}
-
-@media screen and (max-width:428px) {
-    header,
-    .search{
-        width:330px;
-        margin-left: 10px;
-        height: 60px;
-    }
-    .searchTxt input{
-        width:160px;
-        font-size: 12px;
-    }
-    .searchBtn{
-        width: 84px;
-        height: 46px;
-        font-size: 12px;
-    }
-    .resultInfo{
-        width: 330px;
-    }
-    .githubFact,
-    .githubHead{
-        width: 279px;
-    }
-    .resultInfo .mainImg{
-        width: 60px;
-        height: 60px;
-    }
-    .resultInfo .mainImg img{
-        width:100%;
-        height:100%;
-    }
-    .githubInfo{
-        width: 200px;
-    }
-    .githubUser{
-        font-size: 17px;
-    }
-    .githubUserName{
-        margin-top: -5px;
-    }
-    .githubJoinedDate{
-        top: 48px;
-    }
-    .githubUserName a,
-    .githubJoinedDate,
-    .githubBio{
-        font-size: 12px;
-    }
-    .githubBio{
-        margin-top: 25px;
-    }
-    .githubRepo{
-        width: 279px;
-    }
-    .githubSocial{
-        grid-template-columns:279px;
-    }
-    .repoTotal,
-    .followerTotal,
-    .followingTotal{
-        text-align: center;
-    }
-
-
-}
+} */
 
 
 
