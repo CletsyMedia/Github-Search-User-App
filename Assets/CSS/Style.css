@@ -43,8 +43,22 @@ img{
     display: block;
 }
 .light-dark{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:.3rem;
     cursor: pointer;
     color: var(--dark-light);
+}
+.DarkMode{
+    position: absolute;
+    top: 0;
+    left:-2.7rem;
+    display: none;
+}
+.mode{
+    display: flex;
 }
 body{
     background-color:var(--body-bg-color);
@@ -125,6 +139,7 @@ header{
     transform: scale(1.05);
 }
 .searchTxt i{
+    color:var(--search-color);
     margin-left: 1rem;
 }
 .resultInfo{
@@ -243,10 +258,45 @@ header{
 
 
 /* Responsiveness */
-@media screen and (max-width:428px) {
+@media screen and (max-width:600px){
     header,
     .search{
+        width:550px;
+        margin-bottom:.3rem;
+    }
+    .searchTxt input{
+        width:160px;
+        font-size: 12px;
+    }
+    .resultInfo{
+        width:550px;
+    }
+    .resultBox{
+        margin: 1rem;
+    }
+    .githubFact,
+    .githubHead{
+        width:100%;
+    }
+    .resultInfo .mainImg{
+        width:100px;
+        height:100px;
+    }
+    .resultInfo .mainImg img{
+        width:100%;
+        height:100%;
+    }
+    .githubInfo{
         width:390px;
+    }
+    .githubBio{
+        margin-top: 1rem;
+    }
+}
+@media screen and (max-width:426px) {
+    header,
+    .search{
+        width:350px;
         margin-bottom:.3rem;
     }
     .searchTxt input{
@@ -259,15 +309,8 @@ header{
         font-size: 12px;
     }
     .resultInfo{
-        width:390px;
+        width:350px;
         max-height:600px;
-    }
-    .resultBox{
-        margin: 1rem;
-    }
-    .githubFact,
-    .githubHead{
-        width:100%;
     }
     .resultInfo .mainImg{
         width: 60px;
@@ -278,7 +321,7 @@ header{
         height:100%;
     }
     .githubInfo{
-        width:270px;
+        width:230px;
     }
     .githubUser{
         font-size: 17px;

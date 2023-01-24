@@ -1,11 +1,16 @@
 let theme = document.querySelector('#theme-btn');
+let dark = document.querySelector(".DarkMode");
+let light = document.querySelector(".lightMode");
 theme.onclick=()=>{
     theme.classList.toggle('fa-sun');
     if(theme.classList.contains('fa-sun')){
         document.body.classList.add("lightTheme");
+        dark.classList.add("mode");
+        light.style.display="none";
     }else{
         document.body.classList.remove("lightTheme");
-
+        dark.classList.remove("mode");
+        light.style.display="flex";
     }
 }
 
