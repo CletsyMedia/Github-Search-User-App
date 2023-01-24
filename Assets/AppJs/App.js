@@ -13,7 +13,7 @@ theme.onclick=()=>{
         light.style.display="flex";
     }
 }
-
+// Targetting the DOM and fetching the API
 const input = document.querySelector('#search');
 const searchBtn =  document.querySelector(".searchBtn");
 
