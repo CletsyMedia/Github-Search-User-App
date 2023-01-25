@@ -1,3 +1,4 @@
+// Theme toggler mode
 let theme = document.querySelector('#theme-btn');
 let dark = document.querySelector(".DarkMode");
 let light = document.querySelector(".lightMode");
@@ -20,6 +21,7 @@ const searchBtn =  document.querySelector(".searchBtn");
 const user = document.querySelector(".githubUser");
 const login = document.querySelector(".githubUserName");
 const joined = document.querySelector(".githubJoinedDate");
+const githubBio = document.querySelector(".githubBio");
 const repo = document.querySelector(".repoTotal");
 const follower = document.querySelector(".followerTotal");
 const followings = document.querySelector(".followingTotal");
@@ -27,7 +29,6 @@ const locations = document.querySelector(".locations");
 const twit = document.querySelector(".twit");
 const websites = document.querySelector(".web");
 const companies = document.querySelector(".companies");
-const githubBio = document.querySelector(".githubBio");
 let img = document.createElement("img");
 let block = document.querySelector(".mainImg");
 // const url = `https://api.github.com/users/CletsyMedia${input.value}`;

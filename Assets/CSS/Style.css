@@ -51,9 +51,8 @@ img{
 }
 .DarkMode{
     position: absolute;
-    top: 0;
-    left:-2.7rem;
     display: none;
+    right:1.3rem;
 }
 .mode{
     display: flex;
